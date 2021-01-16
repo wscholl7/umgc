@@ -1,4 +1,4 @@
-name: Deploy HTML Files to AppService - CMST386
+name: Deploy HTML Files to APPSERVICECMST386
 
 on:
 
@@ -6,7 +6,7 @@ on:
 
     branches:
 
-      - main
+      - master
 
 jobs:
 
@@ -16,7 +16,7 @@ jobs:
 
      steps:
 
-    - uses: actions/checkout@main
+    - uses: actions/checkout@master
 
     - name: Deploy to Azure Web App
 
