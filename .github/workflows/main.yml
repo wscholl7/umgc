@@ -1,0 +1,31 @@
+name: Deploy HTML Files to AppService - CMST386
+
+on:
+
+  push:
+
+    branches:
+
+      - master
+
+jobs:
+
+  build-and-deploy:
+
+    runs-on: windows-latest
+
+     steps:
+
+    - uses: actions/checkout@master
+
+    - name: Deploy to Azure Web App
+
+      uses: azure/webapps-deploy@v1
+
+      with:
+
+        app-name: 'CMST386-wscholl1'
+
+        slot-name: 'production'
+
+        publish-profile: ${{ secrets.APPSERVICECMST386 }}
